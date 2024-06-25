@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:root{
+--Red:hsl(0, 78%, 62%);
+--Cyan: hsl(180, 62%, 55%);
+--Orange: hsl(34, 97%, 64%);
+--Blue: hsl(212, 86%, 64%);
+--Very-Dark-Blue: hsl(234, 12%, 34%);
+--Grayish-Blue: hsl(229, 6%, 66%);
+--Very-Light-Gray: hsl(0, 0%, 98%);
+}
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-size: 15px;
+    font-family: "Poppins", sans-serif;
+}
+.technology{
+    background-color: var(--Very-Light-Gray);
+    min-height: 100vh;
+}
+.container {
+    max-width: 1100px;
+    margin: auto;
+    padding: 0 2rem;
+}
+.technology .technology-content{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.technology .technology-content .heading{
+    text-align: center;
+}
+.technology .technology-content .heading h1{
+    font-size: 32px;
+    font-weight: 200;
+    color: var(--Very-Dark-Blue);
+}
+.technology .technology-content .heading h2 {
+    font-size: 32px;
+    color: var(--Very-Dark-Blue);
+    font-weight: 600;
+}
+.technology .technology-content .heading p{
+    margin-top: 20px;
+    color: var(--Grayish-Blue);
+    max-width: 500px;
+    line-height: 1.6;
+}
+.technology .technology-content .row {
+    display: grid;
+    grid-template-columns: repeat(3 ,1fr);
+    margin-top: 4rem;
+    column-gap: 30px;
+    align-items: center;
+}
+.technology .technology-content .row .card {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, 0.1);
+    height: 230px;
+    border-radius: 5px;
+    position: relative;
+}
+.technology .technology-content .row .card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: var(--Very-Dark-Blue);
+}
+.technology .technology-content .row .card p{
+    font-size: 14px;
+    color: var(--Grayish-Blue);
+}
+.technology .technology-content .row .card img{
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+}
+.technology .technology-content .row .col-2 .card-1{
+    margin-bottom: 30px;
+    border-top: 4px solid var(--Red);
+}
+.technology .technology-content .row .col-2 .card-2 {
+    border-top: 4px solid var(--Orange);
+}
+.technology .technology-content .row .col-1 {
+    border-top: 4px solid var(--Cyan);
+}
+.technology .technology-content .row .col-3 {
+    border-top: 4px solid var(--Blue);
+}
+/* Resposive */
+@media (max-width:700px) {
+    .container{
+        padding: 2rem;
+    }
+    .technology .technology-content .heading h1,
+    .technology .technology-content .heading h2 {
+        font-size: 25px;
+    }
+    .technology .technology-content .row {
+        grid-template-columns: 1fr;
+    }
+    .technology .technology-content .row .col-2 .card-1,
+    .technology .technology-content .row .col-3 {
+        margin-top: 30px;
+    }
+}
